@@ -281,6 +281,11 @@ findTown townSlug towns =
 -- MAIN
 
 
+baseUrl : String
+baseUrl =
+    "https://raw.githubusercontent.com/devfriendlyplaces/data/data/locations/"
+
+
 defaultTown : TownSlug
 defaultTown =
     "toulouse"
@@ -288,12 +293,7 @@ defaultTown =
 
 townsUrl : String
 townsUrl =
-    "http://localhost:8000/locations/locations.json"
-
-
-baseUrl : String
-baseUrl =
-    "http://localhost:8000/locations/"
+    baseUrl ++ "locations.json"
 
 
 placesUrlFor : TownSlug -> String
