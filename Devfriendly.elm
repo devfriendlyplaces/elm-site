@@ -30,6 +30,19 @@ type alias Model =
     }
 
 
+type alias Place =
+    { name : String
+    , latitude : Float
+    , longitude : Float
+    , address : String
+    , url : String
+    , openHours : String
+    , comment : String
+    , wifi : Bool
+    , power : Bool
+    }
+
+
 
 -- UPDATE
 
@@ -185,24 +198,11 @@ cmdsDisplayTown town visitedTowns =
 
 townDecoder : Decoder Town
 townDecoder =
-    Decode.map4 Town
-        (field "name" Decode.string)
-        (field "lat" Decode.float)
-        (field "lon" Decode.float)
-        (field "defaultZoom" Decode.int)
-
-
-type alias Place =
-    { name : String
-    , latitude : Float
-    , longitude : Float
-    , address : String
-    , url : String
-    , openHours : String
-    , comment : String
-    , wifi : Bool
-    , power : Bool
-    }
+    Pipe.decode Town
+        |> Pipe.required "name" Decode.string
+        |> Pipe.required "lat" Decode.float
+        |> Pipe.required "lon" Decode.float
+        |> Pipe.required "defaultZoom" Decode.int
 
 
 placeDecoder : Decoder Place
