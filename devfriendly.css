@@ -22,3 +22,7 @@ select#towns {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
 	list-style-type: none;
 }
+
+ul.popup-marker {
+	list-style-type: none;
+}

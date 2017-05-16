@@ -24,7 +24,17 @@
             places.map( place =>
                 L.marker([place.latitude, place.longitude])
                     .addTo(map)
-                    .bindPopup(place.name)
+                    .bindPopup(placeToHtml(place))
             )
     )
+
+    placeToHtml = place =>
+        `
+        <ul class="popup-marker">
+            <li><h3>${place.url ? place.name.link(place.url) : place.name}</h3></li>
+            ${place.address ? '<li>' + place.address + '</li>' : ''}
+            ${place.openHours ? '<li><strong>Open:</strong><br>' + place.openHours + '</li>' : ''}
+            ${place.comment ? '<li><strong>Comment:</strong><br>' + place.comment + '</li>' : ''}
+        </ul>
+        `
 </script>
