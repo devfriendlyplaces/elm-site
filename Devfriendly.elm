@@ -33,6 +33,10 @@ type alias Place =
     { name : String
     , latitude : Float
     , longitude : Float
+    , address : Maybe String
+    , url : Maybe String
+    , openHours : Maybe String
+    , comment : Maybe String
     }
 
 
@@ -200,10 +204,14 @@ townDecoder =
 
 placeDecoder : Decoder Place
 placeDecoder =
-    Decode.map3 Place
+    Decode.map7 Place
         (field "name" Decode.string)
         (field "lat" Decode.float)
         (field "lon" Decode.float)
+        (Decode.maybe (field "address" Decode.string))
+        (Decode.maybe (field "url" Decode.string))
+        (Decode.maybe (field "openHours" Decode.string))
+        (Decode.maybe (field "comment" Decode.string))
 
 
 placesDecode : String -> List Place
