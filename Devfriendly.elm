@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode as Decode exposing (Decoder, field, list)
+import Json.Decode.Pipeline as Pipe exposing (decode, required, optional, optionalAt)
 import Http
 import Navigation
 
@@ -26,17 +27,6 @@ type alias Model =
     , places : List Place
     , selectedTown : TownSlug
     , visitedTowns : List TownSlug
-    }
-
-
-type alias Place =
-    { name : String
-    , latitude : Float
-    , longitude : Float
-    , address : Maybe String
-    , url : Maybe String
-    , openHours : Maybe String
-    , comment : Maybe String
     }
 
 
@@ -202,16 +192,31 @@ townDecoder =
         (field "defaultZoom" Decode.int)
 
 
+type alias Place =
+    { name : String
+    , latitude : Float
+    , longitude : Float
+    , address : String
+    , url : String
+    , openHours : String
+    , comment : String
+    , wifi : Bool
+    , power : Bool
+    }
+
+
 placeDecoder : Decoder Place
 placeDecoder =
-    Decode.map7 Place
-        (field "name" Decode.string)
-        (field "lat" Decode.float)
-        (field "lon" Decode.float)
-        (Decode.maybe (field "address" Decode.string))
-        (Decode.maybe (field "url" Decode.string))
-        (Decode.maybe (field "openHours" Decode.string))
-        (Decode.maybe (field "comment" Decode.string))
+    Pipe.decode Place
+        |> Pipe.required "name" Decode.string
+        |> Pipe.required "lat" Decode.float
+        |> Pipe.required "lon" Decode.float
+        |> Pipe.optional "address" Decode.string ("")
+        |> Pipe.optional "url" Decode.string ("")
+        |> Pipe.optional "openHours" Decode.string ("")
+        |> Pipe.optional "comment" Decode.string ("")
+        |> Pipe.optionalAt [ "wifi", "available" ] Decode.bool False
+        |> Pipe.optionalAt [ "power", "available" ] Decode.bool False
 
 
 placesDecode : String -> List Place
