@@ -1,0 +1,15 @@
+{
+    "name": "DevFriendlyPlaces",
+    "repository": "https://github.com/devfriendlyplaces/elm-site",
+    "env": {
+        "ELM_COMPILE": "elm make Devfriendly.elm --output devfriendly.js"
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/srid/heroku-buildpack-elm.git"
+        },
+        {
+            "url": "https://github.com/hone/heroku-buildpack-static"
+        }
+    ]
+}
