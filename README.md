@@ -2,23 +2,7 @@ Dev friendly places
 ===================
 A collection of nice places where developers can work fine and some useful informations about these places (wifi ? power ? ...) on the map of a location.
 
-Current locations
------------------
- - [Cumbria:](https://devfriendlyplaces.github.io/elm-site/#cumbria)
- - [Dakar:](https://devfriendlyplaces.github.io/elm-site/#dakar)
- - [Foix:](https://devfriendlyplaces.github.io/elm-site/#foix)
- - [Lille:](https://devfriendlyplaces.github.io/elm-site/#lille)
- - [London:](https://devfriendlyplaces.github.io/elm-site/#london)
- - [Lyon:](https://devfriendlyplaces.github.io/elm-site/#lyon)
- - [Marseille:](https://devfriendlyplaces.github.io/elm-site/#marseille)
- - [Montpellier:](https://devfriendlyplaces.github.io/elm-site/#montpellier)
- - [Nantes:](https://devfriendlyplaces.github.io/elm-site/#nantes)
- - [Oxford:](https://devfriendlyplaces.github.io/elm-site/#oxford)
- - [Paris:](https://devfriendlyplaces.github.io/elm-site/#paris)
- - [Saint-Étienne:](https://devfriendlyplaces.github.io/elm-site/#saint-etienne)
- - [Saint-Louis:](https://devfriendlyplaces.github.io/elm-site/#saint-louis)
- - [Toulon:](https://devfriendlyplaces.github.io/elm-site/#toulon)
- - [Toulouse:](https://devfriendlyplaces.github.io/elm-site/#toulouse)
+[website](dfp-elm.herokuapp.com)
 
 Contribute
 ----------
