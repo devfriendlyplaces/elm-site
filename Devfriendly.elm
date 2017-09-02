@@ -26,7 +26,6 @@ type alias Model =
     { towns : List Town
     , places : List Place
     , selectedTown : TownSlug
-    , visitedTowns : List TownSlug
     }
 
 
@@ -68,7 +67,7 @@ update msg model =
                 case town of
                     Just town ->
                         ( { model | selectedTown = townSlug }
-                        , Cmd.batch (cmdsDisplayTown town model.visitedTowns)
+                        , moveMap town
                         )
 
                     Nothing ->
@@ -100,25 +99,11 @@ update msg model =
                 ( { model | towns = [] }, Cmd.none )
 
         GetPlaces (Ok places) ->
-            let
-                visitedTowns =
-                    let
-                        isVisited =
-                            List.member model.selectedTown model.visitedTowns
-                    in
-                        case isVisited of
-                            True ->
-                                model.visitedTowns
-
-                            False ->
-                                [ model.selectedTown ] ++ model.visitedTowns
-            in
-                ( { model
-                    | places = places ++ model.places
-                    , visitedTowns = visitedTowns
-                  }
-                , addPlaces places
-                )
+            ( { model
+                | places = places ++ model.places
+              }
+            , addPlaces places
+            )
 
         GetPlaces (Err error) ->
             let
@@ -175,21 +160,9 @@ loadPlaces url =
         |> Http.send GetPlaces
 
 
-cmdsDisplayTown : Town -> List TownSlug -> List (Cmd Msg)
-cmdsDisplayTown town visitedTowns =
-    let
-        townSlug =
-            slugifyTownName town.name
-
-        isVisited =
-            List.member townSlug visitedTowns
-    in
-        case isVisited of
-            False ->
-                [ moveMap town, loadPlaces (placesUrlFor townSlug) ]
-
-            True ->
-                [ moveMap town ]
+cmdsDisplayTown : Town -> List (Cmd Msg)
+cmdsDisplayTown town =
+    [ moveMap town ]
 
 
 
@@ -309,6 +282,11 @@ townsUrl =
     baseUrl ++ "locations.json"
 
 
+placesUrl : String
+placesUrl =
+    "/" ++ "all_places.json"
+
+
 placesUrlFor : TownSlug -> String
 placesUrlFor townSlug =
     baseUrl ++ townSlug ++ ".json"
@@ -325,9 +303,8 @@ main =
                 ( { towns = []
                   , places = []
                   , selectedTown = townSlug
-                  , visitedTowns = []
                   }
-                , Cmd.batch [ loadTowns townsUrl ]
+                , Cmd.batch [ loadTowns townsUrl, loadPlaces placesUrl ]
                 )
     in
         Navigation.program UrlChange
