@@ -614,6 +614,16 @@
         "comment": "A community coffee with organic and local food an drinks."
     },
     {
+        "name": "Barbican Centre",
+        "lat": 51.5200801,
+        "lon": -0.0954517,
+        "address": "Silk St, London EC2Y 8DS",
+        "openHours": "Monday to Saturday, 09:00 to 23:00; Sunday, 11:00 to 23:00",
+        "type": "coffee, arts space, theatre, cinema, bar, restaurant",
+        "power": { "available": true },
+        "wifi": { "available": true }
+    },
+    {
         "name": "Timberyard",
         "lat": 51.524126,
         "lon": -0.09638199999994868,
@@ -1209,6 +1219,18 @@
         "url": "http://naturalbreadcompany.co.uk/"
     },
     {
+        "name": "Mel, Mich & Martin",
+        "lat": 48.8509681,
+        "lon": 2.3794449,
+        "address": "8 Rue Saint-Bernard, 75011 Paris",
+        "openHours" : "8h00-19h00",
+        "type": "coffee, restaurant",
+        "comment" : "Bright and quiet place café with scrumptious home made food and good coffee. Close to a pétanque area surrounded by greeneries.",
+        "url": "http://www.melmichetmartin.paris/",
+        "power": {"available": true},
+        "wifi": {"available": true}
+    },
+    {
         "name": "Strada Café",
         "lat": 48.8469496,
         "lon": 2.348961,
@@ -1296,6 +1318,30 @@
         "type": "café + restaurant",
         "comment" : "Café and restaurant in a youth hostel. Large nice room with wooden table and glass roof. Not the best café / restaurant but nice working place. Few power outlet. Wifi available but I think it's only for hostel residents - in any case, enjoyparis ;)",
         "url": "http://www.belushis.com/bars/paris/gare-du-nord",
+        "power": {"available": true},
+        "wifi": {"available": false}
+    },
+        {
+        "name": "La Gaïeté Lyrique",
+        "lat": 48.8665628,
+        "lon": 2.3512001,
+        "address": "3 bis Rue Papin, 75003 Paris",
+        "openHours" : "From Thuesday to Saturday 14h-20h, Sunday 14h-18h",
+        "type": "café",
+        "comment" : "Café on 1st and 2nd floor. Prefer the 2nd one",
+        "url": "http://gaite-lyrique.net",
+        "power": {"available": true},
+        "wifi": {"available": true}
+    },
+        {
+        "name": "La Halle Pajol - Auberge de Jeunesse Paris Yves Robert",
+        "lat": 48.8886871,
+        "lon": 2.3608308,
+        "address": "20 Espl. Nathalie Sarraute, 75018 Paris",
+        "openHours" : "0h-24h",
+        "type": "café + hostel",
+        "comment" : "One of the place with the cheapest beers in Paris - not sure the café is opened all day long as the hostel",
+        "url": "http://halle-pajol.fr",
         "power": {"available": true},
         "wifi": {"available": false}
     },
@@ -1490,6 +1536,17 @@
         "type": "Coffee Shop",
         "power": {"available": true},
         "wifi": {"available": true}
+    },
+    {
+        "name": "La ferme attitude",
+        "openHours": "Monday to Saturday: 9h30 - 19h30",
+        "lat": 43.6009773,
+        "lon": 1.3795652,
+        "address": "23 Rue d'Astorg",
+        "type" : "coffee/restaurant/shop",
+        "power": {"available": false},
+        "wifi": {"available": false},
+        "url": "http://www.fermeattitude.fr"
     },
     {
         "name": "Café Contretemps",
