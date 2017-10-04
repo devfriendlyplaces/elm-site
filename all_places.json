@@ -460,6 +460,17 @@
         "url": "https://fr-fr.facebook.com/FrenchCoffeeShopCahors?ref=stream&hc_location=stream"
     },
     {
+        "name": "Le Lieu Commun",
+        "openHours": "Monday - Friday, 9h00 - 18h00",
+        "lat": 50.948865,
+        "lon": 1.853318,
+        "address":  "8 rue des soupirants",
+        "type" : "Coworking",
+        "wifi": {"available": true},
+        "power": {"available": true},
+        "url": "https://www.facebook.com/lelieucommun"
+    },
+    {
         "name": "Starbucks",
         "lat": 54.89507,
         "lon": -2.93542,
