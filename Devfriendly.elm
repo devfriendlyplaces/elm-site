@@ -269,7 +269,7 @@ findTown townSlug towns =
 
 baseUrl : String
 baseUrl =
-    "https://raw.githubusercontent.com/devfriendlyplaces/data/data/locations/"
+    "https://raw.githubusercontent.com/devfriendlyplaces/data/master/locations/"
 
 
 defaultTown : TownSlug
