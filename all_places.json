@@ -565,6 +565,17 @@
         "comment": "Power plug on the terrace"
     },
     {
+      "name": "Nulle Part Ailleurs",
+      "Opnening": "From monday to saturday, 09h30 - 20h00",
+      "lat": 48.1742592,
+      "lon": 6.4505618,
+      "address": "3 Place Saint-Goery, 88000, Épinal",
+      "type" : "coffee/restaurant",
+      "power": {"available": true},
+      "wifi": {"available": true, "comment": "just ask to the staff :)"},
+      "url": "https://www.facebook.com/nullepartailleursepinal/"
+    },
+    {
         "name": "L'Equitable",
         "openHours": "Thusday - Friday, 12h00 - 19h00",
         "lat": 42.965589,
@@ -586,6 +597,30 @@
         "power": {"available": true},
         "comment": "table pour poser son ordi, convivial, bon accueil.",
         "url": "https://www.facebook.com/depains.a.sandwichs/?fref=ts"
+    },
+    {
+      "name": "Huset",
+      "Opnening": "From monday to friday, 11h00 - 18h00",
+      "lat": 51.0548247,
+      "lon": 3.7131703000000016,
+      "address": "Hoogstraat 49, 9000 Gent",
+      "type" : "coffee/restaurant",
+      "power": {"available": true, "comment": "many multi-sockets next to the tables"},
+      "wifi": {"available": true, "comment": "just ask to the staff :)"},
+      "url": "http://www.husetgent.be/",
+      "comment": "Nice coffee that makes affordable lunches in an ancient hostel. Really sweet terrace in the back."
+    },
+     {
+      "name": "Vooruit",
+      "Opnening": "Mon, Tue, Wed-> 10:00 - 01:00 / Thu, Fri, Sat -> 10:00 - 02:00 / Sun -> 12:00 - 01:00",
+      "lat": 51.0476851,
+      "lon": 3.7274632,
+      "address": "Sint-Pietersnieuwstraat 23, Gand 9000",
+      "type" : "coffee/restaurant/bar/art center",
+      "power": {"available": true, "comment": "some multi-sockets next to the tables nearby the walls"},
+      "wifi": {"available": true, "comment": "kind of intranet, no password required"},
+      "url": "http://vooruit.be/en/",
+      "comment": "Huge friendly place with local beers. An institution."
     },
     {
         "name": "Bar du Chateau",
