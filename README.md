@@ -2,7 +2,7 @@ Dev friendly places
 ===================
 A collection of nice places where developers can work fine and some useful informations about these places (wifi ? power ? ...) on the map of a location.
 
-[website](dfp-elm.herokuapp.com)
+[website](https://www.devfriendlyplaces.net)
 
 Contribute
 ----------
